@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChessUI.PauseMenu">
+	<Border Width="275"
+			Height="125"
+			Classes="Border">
+		<Grid RowDefinitions="*,*"
+			  ColumnDefinitions="*,*">
+			<TextBlock Grid.ColumnSpan="2"
+					   Text="RESTART GAME?"
+					   Classes="TextBlock"
+					   FontSize="28"/>
+			<Button Grid.Row="1"
+					Content="CONTINUE"
+					Classes="Button"
+					Width="80"
+					Height="30"
+					Click="Continue_Click"/>
+			<Button Grid.Row="1"
+					Grid.Column="1"
+					Content="RESTART"
+					Classes="Button"
+					Width="80"
+					Height="30"
+					Click="Restart_Click"/>
+		</Grid>	
+	</Border>
+  
+</UserControl>

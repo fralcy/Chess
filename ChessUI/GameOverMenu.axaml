@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChessUI.GameOverMenu">
+	<Border Width="275"
+			Height="125"
+			Classes="Border">
+		<Grid RowDefinitions="*,0.5*,*"
+			  ColumnDefinitions="*,*">
+			<TextBlock Grid.ColumnSpan="2"
+					   Name="WinnerText"
+					   Text="WINNER TEXT"
+					   Classes="TextBlock"/>
+			<TextBlock Grid.Row="1"
+					   Grid.ColumnSpan="2"
+					   Name="ReasonText"
+					   Text="REASON TEXT"
+					   Classes="TextBlock"/>
+			<Button Grid.Row="2"
+					Content="RESTART"
+					Classes="Button"
+					Width="80"
+					Height="30"
+					Click="Restart_Click"/>
+			<Button Grid.Row="2"
+					Grid.Column="1"
+					Content="EXIT"
+					Classes="Button"
+					Width="80"
+					Height="30"
+					Click="Exit_Click"/>
+		</Grid>
+	</Border>
+</UserControl>

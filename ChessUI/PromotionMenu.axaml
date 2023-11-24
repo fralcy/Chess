@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChessUI.PromotionMenu">
+	<Border Width="275"
+			Height="125"
+			Classes="Border">
+		<Grid RowDefinitions="*,1.5*">
+			<TextBlock Text="SELECT A PIECE"
+					   Classes="TextBlock"
+					   FontSize="28"/>
+			<UniformGrid Grid.Row="1"
+						 Rows="1"
+						 Columns="4">
+				<Image Name="QueenImg"
+					   PointerPressed="QueenImg_PointerPressed"
+					   Source="avares://ChessUI/Assets/QueenW2.png"/>
+				<Image Name="RookImg"
+					   PointerPressed="RookImg_PointerPressed"
+					   Source="avares://ChessUI/Assets/RookW2.png"/>
+				<Image Name="BishopImg"
+					   PointerPressed="BishopImg_PointerPressed"
+					   Source="avares://ChessUI/Assets/BishopW2.png"/>
+				<Image Name="KnightImg"
+					   PointerPressed="KnightImg_PointerPressed"
+					   Source="avares://ChessUI/Assets/KnightW2.png"/>
+			</UniformGrid>
+		</Grid>
+	</Border>
+</UserControl>
