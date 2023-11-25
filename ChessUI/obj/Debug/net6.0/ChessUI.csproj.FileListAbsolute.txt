@@ -293,3 +293,4 @@ C:\Users\THINH\Desktop\Chess\ChessUI\bin\Debug\net6.0\Assets\QueenB.png
 C:\Users\THINH\Desktop\Chess\ChessUI\obj\Debug\net6.0\ChessUI.sourcelink.json
 C:\Users\THINH\Desktop\LTTQ\Chess\ChessUI\bin\Debug\net6.0\Assets\BishopW.png
 C:\Users\THINH\Desktop\LTTQ\Chess\ChessUI\bin\Debug\net6.0\Assets\QueenB.png
+C:\Users\THINH\Desktop\LTTQ\Chess\ChessUI\obj\Debug\net6.0\ChessUI.sourcelink.json

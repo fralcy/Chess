@@ -3,10 +3,10 @@
              x:Class="ChessUI.App"
              RequestedThemeVariant="Default">
 	<Application.Resources>
-		<SolidColorBrush x:Key="StrokeColor">#260000</SolidColorBrush>
-		<SolidColorBrush x:Key="FillColor">#CC380404</SolidColorBrush>
-		<SolidColorBrush x:Key="TextColor">#FFA274</SolidColorBrush>
-		<SolidColorBrush x:Key="ButtonColor">#730909</SolidColorBrush>
+		<SolidColorBrush x:Key="StrokeColor">#C0C0C0</SolidColorBrush>
+		<SolidColorBrush x:Key="FillColor">#F5F5F5</SolidColorBrush>
+		<SolidColorBrush x:Key="TextColor">#333333</SolidColorBrush>
+		<SolidColorBrush x:Key="ButtonColor">#E6E6FA</SolidColorBrush>
 	</Application.Resources>
 	<Application.Styles>
 		<!-- v  Don't delete this line  v -->

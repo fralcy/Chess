@@ -142,7 +142,7 @@ namespace ChessUI
         }
         private void ShowHighlights()
         {
-            Color color = Color.FromArgb(255, 243, 65, 69);
+            Color color = Color.FromArgb(255, 144, 238, 144);
             foreach(Position to in moveCache.Keys)
             {
                 highlights[to.Row, to.Column].Fill = new SolidColorBrush(color);

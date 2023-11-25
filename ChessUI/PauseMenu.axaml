@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="ChessUI.PauseMenu">
-	<Border Width="275"
-			Height="125"
+	<Border Width="365"
+			Height="165"
 			Classes="Border">
 		<Grid RowDefinitions="*,*"
 			  ColumnDefinitions="*,*">
@@ -16,15 +16,15 @@
 			<Button Grid.Row="1"
 					Content="CONTINUE"
 					Classes="Button"
-					Width="80"
-					Height="30"
+					Width="105"
+					Height="40"
 					Click="Continue_Click"/>
 			<Button Grid.Row="1"
 					Grid.Column="1"
 					Content="RESTART"
 					Classes="Button"
-					Width="80"
-					Height="30"
+					Width="105"
+					Height="40"
 					Click="Restart_Click"/>
 		</Grid>	
 	</Border>
