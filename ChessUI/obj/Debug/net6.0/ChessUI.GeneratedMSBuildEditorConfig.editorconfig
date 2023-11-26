@@ -31,3 +31,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/THINH/Desktop/LTTQ/Chess/ChessUI/PromotionMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/THINH/Desktop/LTTQ/Chess/ChessUI/StartMenu.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
