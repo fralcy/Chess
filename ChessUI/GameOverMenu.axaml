@@ -12,12 +12,14 @@
 			<TextBlock Grid.ColumnSpan="2"
 					   Name="WinnerText"
 					   Text="WINNER TEXT"
-					   Classes="TextBlock"/>
+					   Classes="TextBlock"
+					   FontSize="28"/>
 			<TextBlock Grid.Row="1"
 					   Grid.ColumnSpan="2"
 					   Name="ReasonText"
 					   Text="REASON TEXT"
-					   Classes="TextBlock"/>
+					   Classes="TextBlock"
+					   FontSize="20"/>
 			<Button Grid.Row="2"
 					Content="RESTART"
 					Classes="Button"

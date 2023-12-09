@@ -11,7 +11,7 @@ namespace ChessUI
         private static Cursor LoadCursor(string filePath)
         {
             Bitmap image = new Bitmap(filePath);
-            PixelPoint hotSpot = new PixelPoint(10, 5);
+            PixelPoint hotSpot = new PixelPoint(1, 1);
             return new Cursor(image, hotSpot);
         }
     }

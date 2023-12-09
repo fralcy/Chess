@@ -23,7 +23,6 @@ namespace ChessUI
             InitializeComponent();
             InitializeBoard();
 
-            ShowStartMenu();
 
             gameState = new GameState(Player.White, Board.Initial());
             DrawBoard(gameState.Board);
@@ -219,12 +218,6 @@ namespace ChessUI
                     RestartGame();
                 }
             };
-        }
-        private void ShowStartMenu()
-        {
-            StartMenu startMenu = new StartMenu();
-            MenuContainer.Content = startMenu;
-            //insert remaining codes here
         }
     }
 }
