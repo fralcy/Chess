@@ -3,6 +3,9 @@
     [Serializable]
     public class Queen : Piece
     {
+        public override double Weight { get; }
+
+        public override double[,] PosVal { get; }
         public override PieceType Type => PieceType.Queen;
         public override Player Color { get; }
         private static readonly Direction[] dirs = new Direction[]
@@ -19,6 +22,16 @@
         public Queen(Player color)
         {
             Color = color;
+            PosVal = ps.evalQueen;
+            if (Color == Player.White)
+            {
+                Weight = 90;
+            }
+            else
+            {
+                Weight = -90;
+            }
+
         }
         public override Piece Copy()
         {

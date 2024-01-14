@@ -1,8 +1,11 @@
 ﻿namespace ChessLogic
 {
     [Serializable]
-    public class Bishop: Piece
+    public class Bishop : Piece
     {
+        public override double Weight { get; }
+
+        public override double[,] PosVal { get; }
         public override PieceType Type => PieceType.Bishop;
         public override Player Color { get; }
         private static readonly Direction[] dirs = new Direction[]
@@ -15,6 +18,19 @@
         public Bishop(Player color)
         {
             Color = color;
+            if (Color == Player.White)
+            {
+                Weight = 30;
+                PosVal = ps.bishopEvalWhite;
+            }
+
+            else
+            {
+                Weight = -30;
+                PosVal = ps.bishopEvalBlack;
+            }
+
+
         }
         public override Piece Copy()
         {
