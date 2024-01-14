@@ -1,0 +1,59 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChessUI.LANOption">
+	<StackPanel Background="White">
+		<!--
+		<Button Click="NewGame_Click" Content="Two Players Mode"
+				Classes="Button" Height="60" FontSize="30"/>
+		<DockPanel>
+			<Button Classes="Button"
+					Click="LAN_Click"
+					Content="Play via LAN" Width="200"
+					Height="60" FontSize="30"/>
+			<TextBox Name="IPTextBox" VerticalContentAlignment="Center"
+					 Height="60" FontSize="30"/>
+		</DockPanel>
+		<Button Click="AI_Click" Content="Play against the Computer"
+				Classes="Button" Height="60" FontSize="30"/>
+		-->
+		<StackPanel Orientation="Horizontal"
+					Classes="StackPanel">
+			<TextBlock Text="Nickname" VerticalAlignment="Top" Height="60"
+				   FontSize="30"></TextBlock>
+			<TextBox Width="300" FontSize="30"
+					 Height="60" VerticalContentAlignment="Center"></TextBox>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal"
+					Classes="StackPanel">
+			<TextBlock Text="LAN Game Namer" Height="60"
+				   FontSize="30"></TextBlock>
+			<TextBox Name="NicknameTextBox"
+					 Width="300" FontSize="30"
+					 Height="60" VerticalContentAlignment="Center"></TextBox>
+			<Button Content="Host Game"
+					Click="Host_Click"/>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal"
+					Classes="StackPanel">
+			<TextBlock Text="Direct IP" VerticalAlignment="Top" Height="60"
+					   FontSize="30"/>
+			<TextBox Width="300" FontSize="30"
+					 Name="IPTextBox"
+					 Height="60" VerticalContentAlignment="Center"></TextBox>
+			<Button Content="Join"
+					Click="Join_Click"/>
+		</StackPanel>
+
+		<Button Content="BACK TO MAIN MENU"
+					Classes="Button"
+					Width="205"
+					Height="40"
+					Margin="0 30 0 0"
+					Click="BackToMainMenu_Click"/>
+	</StackPanel>
+</UserControl>
