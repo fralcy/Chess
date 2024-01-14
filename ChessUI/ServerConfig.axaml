@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+             x:Class="ChessUI.ServerConfig">
+
+	<StackPanel Width="800" Height="800"
+				Background="White">
+		<StackPanel Orientation="Horizontal">
+			<CheckBox Name="WhiteCheckBox"
+					  Width="40" Height="40"
+					  Click="WhiteCheckBox_Click"
+					  IsChecked="True"/>
+			<TextBlock Text="White" FontSize="20"/>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal">
+			<CheckBox Name="BlackCheckBox"
+					  Width="40" Height="40"
+					  Click="BlackCheckBox_Click"
+						  />
+			<TextBlock Text="Black" FontSize="20"/>
+		</StackPanel>
+
+
+
+		<Button Name="Host" Click="Host_Click"
+				Height="50" Content="Host"/>
+		<TextBlock Height="60" Name="IPTextBlock"
+				   FontSize="20"/>
+
+	</StackPanel>
+
+</UserControl>
