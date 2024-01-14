@@ -6,11 +6,27 @@ namespace ChessLogic
     public class Board
     {
         private readonly Piece[,] pieces = new Piece[8, 8];
+        public double BoardValue = 0;
         private readonly Dictionary<Player, Position> pawnSkipPositions = new Dictionary<Player, Position> 
         {
             {Player.White, null },
             {Player.Black, null },
         };
+
+        public void SetValue()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (pieces[i, j] != null)
+                        BoardValue += pieces[i, j].Weight + pieces[i, j].PosVal[7 - i, j];
+                    else
+                        BoardValue += 0;
+                }
+            }
+
+        }
         public Piece this[int row, int col]
         {
             get { return pieces[row, col]; }

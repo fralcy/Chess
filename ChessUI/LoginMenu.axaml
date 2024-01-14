@@ -15,5 +15,9 @@
 			<TextBox Name="IPTextBox" VerticalContentAlignment="Center"
 					 Height="60" FontSize="30"/>
 		</DockPanel>
+		<Button Classes="Button"
+					Click="AI_Click"
+					Content="Play against the Computer"
+					Height="60" FontSize="30"/>
 	</StackPanel>
 </UserControl>

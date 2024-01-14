@@ -1,12 +1,14 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace ChessLogic
+﻿namespace ChessLogic
 {
     [Serializable]
-    public class Pawn: Piece
+    public class Pawn : Piece
     {
+        public override double Weight { get; }
+
+        public override double[,] PosVal { get; }
         public override PieceType Type => PieceType.Pawn;
         public override Player Color { get; }
+
         private readonly Direction forward;
         public Pawn(Player color)
         {
@@ -14,10 +16,14 @@ namespace ChessLogic
             if (color == Player.White)
             {
                 forward = Direction.North;
+                Weight = 10;
+                PosVal = ps.pawnEvalWhite;
             }
             else if (color == Player.Black)
             {
                 forward = Direction.South;
+                Weight = -10;
+                PosVal = ps.pawnEvalBlack;
             }
         }
         public override Piece Copy()
@@ -30,7 +36,7 @@ namespace ChessLogic
         {
             return Board.IsInside(pos) && board.IsEmpty(pos);
         }
-        private bool CanCaptureAt(Position pos, Board board) 
+        private bool CanCaptureAt(Position pos, Board board)
         {
             if (!Board.IsInside(pos) || board.IsEmpty(pos))
             {
@@ -48,9 +54,9 @@ namespace ChessLogic
         private IEnumerable<Move> ForwardMoves(Position from, Board board)
         {
             Position oneMovePos = from + forward;
-            if(CanMoveTo(oneMovePos, board))
+            if (CanMoveTo(oneMovePos, board))
             {
-                if (oneMovePos.Row==0||oneMovePos.Row==7)
+                if (oneMovePos.Row == 0 || oneMovePos.Row == 7)
                 {
                     foreach (Move promMove in PromotionMoves(from, oneMovePos))
                     {
@@ -70,7 +76,7 @@ namespace ChessLogic
         }
         private IEnumerable<Move> DiagonalMoves(Position from, Board board)
         {
-            foreach(Direction dir in new Direction[] {Direction.West, Direction.East})
+            foreach (Direction dir in new Direction[] { Direction.West, Direction.East })
             {
                 Position to = from + forward + dir;
 
@@ -96,11 +102,11 @@ namespace ChessLogic
         }
         public override IEnumerable<Move> GetMoves(Position from, Board board)
         {
-            return ForwardMoves(from, board).Concat(DiagonalMoves(from,board));
+            return ForwardMoves(from, board).Concat(DiagonalMoves(from, board));
         }
         public override bool CanCaptureOpponentKing(Position from, Board board)
         {
-            return DiagonalMoves(from, board).Any(move=>
+            return DiagonalMoves(from, board).Any(move =>
             {
                 Piece piece = board[move.ToPos];
                 return piece != null && piece.Type == PieceType.King;

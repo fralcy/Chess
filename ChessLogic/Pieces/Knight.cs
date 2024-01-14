@@ -3,11 +3,19 @@
     [Serializable]
     public class Knight : Piece
     {
+        public override double Weight { get; }
+
+        public override double[,] PosVal { get; }
         public override PieceType Type => PieceType.Knight;
         public override Player Color { get; }
         public Knight(Player color)
         {
+            PosVal = ps.knightEval;
             Color = color;
+            if (Color == Player.White)
+                Weight = 30;
+            else
+                Weight = -30;
         }
         public override Piece Copy()
         {
@@ -17,9 +25,9 @@
         }
         private static IEnumerable<Position> PotentialToPositions(Position from)
         {
-            foreach (Direction vDir in new Direction[] {Direction.North, Direction.South})
+            foreach (Direction vDir in new Direction[] { Direction.North, Direction.South })
             {
-                foreach (Direction hDir in new Direction[] {Direction.West, Direction.East})
+                foreach (Direction hDir in new Direction[] { Direction.West, Direction.East })
                 {
                     yield return from + (2 * vDir) + hDir;
                     yield return from + (2 * hDir) + vDir;
