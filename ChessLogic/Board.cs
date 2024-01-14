@@ -2,6 +2,7 @@
 
 namespace ChessLogic
 {
+    [Serializable]
     public class Board
     {
         private readonly Piece[,] pieces = new Piece[8, 8];

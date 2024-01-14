@@ -1,5 +1,6 @@
 ﻿namespace ChessLogic
 {
+    [Serializable]
     public abstract class Piece
     {
         public abstract PieceType Type { get; }

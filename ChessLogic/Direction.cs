@@ -1,5 +1,6 @@
 ﻿namespace ChessLogic
 {
+    [Serializable]
     public class Direction
     {
         public readonly static Direction North = new Direction(-1, 0);

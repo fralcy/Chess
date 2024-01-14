@@ -2,6 +2,7 @@
 
 namespace ChessLogic
 {
+    [Serializable]
     public class GameState
     {
         public Board Board { get; }

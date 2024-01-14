@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj": {}
+    "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj": {
+    "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj",
+        "projectUniqueName": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj",
         "projectName": "ChessLogic",
-        "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj",
-        "packagesPath": "C:\\Users\\THINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\obj\\",
+        "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj",
+        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
+        "outputPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

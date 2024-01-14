@@ -2,6 +2,7 @@
 
 namespace ChessLogic
 {
+    [Serializable]
     public class Pawn: Piece
     {
         public override PieceType Type => PieceType.Pawn;

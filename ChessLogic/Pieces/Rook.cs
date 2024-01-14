@@ -1,5 +1,6 @@
 ﻿namespace ChessLogic
 {
+    [Serializable]
     public class Rook : Piece
     {
         public override PieceType Type => PieceType.Rook;
