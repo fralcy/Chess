@@ -7,10 +7,12 @@ namespace ChessLogic
     {
         public Board Board { get; }
         public Player CurrentPlayer { get; private set; }
-        public Result Result { get; private set; } = null;
+        public Result Result { get; set; } = null;
         private int noCaptureOrPawnMoves = 0;
         private string stateString;
         private readonly Dictionary<string,int> stateHistory = new Dictionary<string,int>();
+        public TimeSpan whiteTimer { get; private set; } = new TimeSpan(0, 10, 0);
+        public TimeSpan blackTimer { get; private set; } = new TimeSpan(0, 10, 0);
         public GameState(Player player, Board board) 
         {
             CurrentPlayer = player;
@@ -69,7 +71,7 @@ namespace ChessLogic
             {
                 if (Board.IsInCheck(CurrentPlayer))
                 {
-                    Result = Result.Win(CurrentPlayer.Oppenent());
+                    Result = Result.Win(CurrentPlayer.Oppenent(), EndReason.Checkmate);
                 }
                 else
                 {
@@ -116,6 +118,14 @@ namespace ChessLogic
         private bool ThreefoldRepetition()
         {
             return stateHistory[stateString] == 3;
+        }
+        public void whiteTimerTick()
+        {
+            whiteTimer = whiteTimer.Subtract(new TimeSpan(0, 0, 1));
+        }
+        public void blackTimerTick()
+        {
+            blackTimer = blackTimer.Subtract(new TimeSpan(0, 0, 1));
         }
     }
 }

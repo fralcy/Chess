@@ -11,22 +11,57 @@
 		Background="#101010"
 		KeyDown="Window_KeyDown">
 	<Viewbox>
-		<Grid Name="BoardGrid"
-			  Width="800"
-			  Height="800"
-			  PointerPressed="BoardGrid_PointerPressed">
-			<Grid.Background>
-				<ImageBrush Source="avares://ChessUI/Assets/Board.png"/>
-			</Grid.Background>
-			<UniformGrid Name="HighlightGrid"
-						 Rows="8"
-						 Columns="8">
-				
-			</UniformGrid>
-			<UniformGrid Name="PieceGrid"
-						 Rows="8"
-						 Columns="8">
-			</UniformGrid>
+		<Grid Width="800"
+			  Height="900">
+			<Grid RowDefinitions="*,16*,*">
+				<Grid Grid.Row="0"
+					  ColumnDefinitions="Auto,*,Auto"
+					  Background="#F5F5F5">
+					<TextBlock Grid.Column="0"
+							   Name="PlayerTextBox2"
+							   Text="Black"
+							   Classes="TextBlock"
+							   FontSize="28"
+							   Margin="20,0,0,0"/>
+					<TextBlock Grid.Column="2"
+							   Name="TimerTextBox2"
+							   Text="10:00"
+							   Classes="TextBlock"
+							   FontSize="28"
+							   Margin="0,0,20,0"/>
+				</Grid>
+				<Grid Grid.Row="1"
+					  Name="BoardGrid"
+					  PointerPressed="BoardGrid_PointerPressed">
+					<Grid.Background>
+						<ImageBrush Source="/Assets/Board.png"/>
+					</Grid.Background>
+					<UniformGrid Name="HighlightGrid"
+								 Rows="8"
+								 Columns="8">
+					</UniformGrid>
+					<UniformGrid Name="PieceGrid"
+								 Rows="8"
+								 Columns="8">
+					</UniformGrid>
+				</Grid>
+				<Grid Grid.Row="2"
+				  ColumnDefinitions="Auto,*,Auto"
+				  Background="#F5F5F5">
+					<TextBlock Grid.Column="0"
+							   Name="PlayerTextBox"
+							   Text="WHITE"
+							   Classes="TextBlock"
+							   FontSize="28"
+							   Margin="20,0,0,0"/>
+					<TextBlock Grid.Column="2"
+							   Name="TimerTextBox"
+							   Text="10:00"
+							   Classes="TextBlock"
+							   FontSize="28"
+							   Margin="0,0,20,0"/>
+				</Grid>
+			</Grid>
 			<ContentControl Name="MenuContainer"/>
 		</Grid>
 	</Viewbox>

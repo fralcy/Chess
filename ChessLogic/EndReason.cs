@@ -7,6 +7,7 @@
         Stalemate,
         FiftyMoveRule,
         InsufficientMaterial,
-        ThreefoldRepetion
+        ThreefoldRepetion,
+        Timeout
     }
 }

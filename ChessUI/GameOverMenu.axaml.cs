@@ -44,6 +44,7 @@ namespace ChessUI
                 EndReason.FiftyMoveRule => "FIFTY-MOVE RULE",
                 EndReason.InsufficientMaterial => "INSUFFICIENT MATERIAL",
                 EndReason.ThreefoldRepetion => "THREEFOLD REPETITION",
+                EndReason.Timeout => $"TIMEOUT - {PlayerString(currentPlayer)}'S OUT OF TIME",
                 _ => ""
             };
         }

@@ -43,10 +43,43 @@ namespace ChessUI
             gameState = new GameState(Player.White, board.Initial());
             DrawBoard(gameState.Board);
             SetCursor(gameState.CurrentPlayer);
-           
+            InitializeTimer();
         }
-       
-        
+
+        private void InitializeTimer()
+        {
+            timer.Interval = TimeSpan.FromMilliseconds(1000);
+            timer.IsEnabled = false;
+            timer.Tick += Timer_Tick;
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (gameState.whiteTimer.TotalSeconds != 0 && gameState.blackTimer.TotalSeconds != 0)
+            {
+                if (gameState.CurrentPlayer == Player.White)
+                {
+                    gameState.whiteTimerTick();
+                    TimerTextBox.Text = gameState.whiteTimer.ToString(@"mm\:ss");
+                }
+                else
+                {
+                    gameState.blackTimerTick();
+                    TimerTextBox2.Text = gameState.blackTimer.ToString(@"mm\:ss");
+                }
+            }
+            else
+            {
+                if (gameState.whiteTimer.TotalSeconds == 0)
+                {
+                    gameState.Result = Result.Win(Player.Black, EndReason.Timeout);
+                }
+                else
+                {
+                    gameState.Result = Result.Win(Player.White, EndReason.Timeout);
+                }
+                ShowGameOver();
+            }
+        }
 
         private void InitializeBoard()
         {
@@ -294,6 +327,8 @@ namespace ChessUI
             gameState = new GameState(Player.White, board.Initial());
             DrawBoard(gameState.Board);
             SetCursor(gameState.CurrentPlayer);
+            TimerTextBox.Text = gameState.whiteTimer.ToString(@"mm\:ss");
+            TimerTextBox2.Text = gameState.blackTimer.ToString(@"mm\:ss");
             if (isLANRun && !IsMenuOnScreen())
             {
                 socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
