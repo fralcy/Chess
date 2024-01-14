@@ -1,8 +1,14 @@
-﻿namespace ChessLogic
+﻿using ChessLogic.Pieces;
+
+namespace ChessLogic
 {
     [Serializable]
     public abstract class Piece
     {
+        public abstract double Weight { get; }
+
+        public PositionValue ps = new PositionValue();
+        public abstract double[,] PosVal { get; }
         public abstract PieceType Type { get; }
         public abstract Player Color { get; }
         public bool HasMoved { get; set; } = false;
@@ -10,7 +16,7 @@
         public abstract IEnumerable<Move> GetMoves(Position from, Board board);
         protected IEnumerable<Position> MovePositionsInDir(Position from, Board board, Direction dir)
         {
-            for (Position pos = from + dir; Board.IsInside(pos);pos+=dir)
+            for (Position pos = from + dir; Board.IsInside(pos); pos += dir)
             {
                 if (board.IsEmpty(pos))
                 {
@@ -20,7 +26,7 @@
 
                 Piece piece = board[pos];
 
-                if(piece.Color != Color)
+                if (piece.Color != Color)
                 {
                     yield return pos;
                 }

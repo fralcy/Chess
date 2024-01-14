@@ -1,8 +1,12 @@
-﻿namespace ChessLogic
+﻿using ChessLogic.Pieces;
+
+namespace ChessLogic
 {
     [Serializable]
     public class King : Piece
     {
+        public override double Weight { get; }
+        public override double[,] PosVal { get; }
         public override PieceType Type => PieceType.King;
         public override Player Color { get; }
         private static readonly Direction[] dirs = new Direction[]
@@ -19,6 +23,19 @@
         public King(Player color)
         {
             Color = color;
+            if (Color == Player.White)
+            {
+                Weight = 900;
+                PosVal = ps.kingEvalWhite;
+            }
+
+            else
+            {
+                Weight = -900;
+                PosVal = ps.kingEvalBlack;
+
+            }
+
         }
         private static bool IsUnmovedRook(Position pos, Board board)
         {
@@ -35,12 +52,12 @@
         }
         private bool CanCastleKingSide(Position from, Board board)
         {
-            if(HasMoved)
+            if (HasMoved)
             {
                 return false;
             }
             Position rookPos = new Position(from.Row, 7);
-            Position[] betweenPositions = new Position[] { new (from.Row, 5), new (from.Row, 6) };
+            Position[] betweenPositions = new Position[] { new(from.Row, 5), new(from.Row, 6) };
             return IsUnmovedRook(rookPos, board) && AllEmpty(betweenPositions, board);
         }
         private bool CanCastleQueenSide(Position from, Board board)
@@ -50,7 +67,7 @@
                 return false;
             }
             Position rookPos = new Position(from.Row, 0);
-            Position[] betweenPositions = new Position[] { new (from.Row, 1), new (from.Row, 2), new(from.Row, 3) };
+            Position[] betweenPositions = new Position[] { new(from.Row, 1), new(from.Row, 2), new(from.Row, 3) };
             return IsUnmovedRook(rookPos, board) && AllEmpty(betweenPositions, board);
         }
         public override Piece Copy()
@@ -64,7 +81,7 @@
             foreach (Direction dir in dirs)
             {
                 Position to = from + dir;
-                if(!Board.IsInside(to))
+                if (!Board.IsInside(to))
                 {
                     continue;
                 }
@@ -84,7 +101,7 @@
             {
                 yield return new Castle(MoveType.CastleKS, from);
             }
-            if (CanCastleQueenSide(from, board)) 
+            if (CanCastleQueenSide(from, board))
             {
                 yield return new Castle(MoveType.CastleQS, from);
             }

@@ -27,11 +27,11 @@ namespace ChessUI
         private SocketManager socket;
         private LoginMenu loginMenu;
         private Board board = new Board();
-        private bool isLANRun = false;
+        private bool isLANRun = false, isBotActive = false;
         private Player player;
         private string serverPieceMsg;
         private bool isServer = false, isClient = false;
-        
+        private Stack<GameState> gameStateStack = new();
 
 
         public MainWindow()
@@ -238,11 +238,16 @@ namespace ChessUI
                 HandleMove(promMove);
             };
         }
-        private void HandleMove(Move move)
+
+        void SubHandleMove(Move move)
         {
             gameState.MakeMove(move);
             DrawBoard(gameState.Board);
             SetCursor(gameState.CurrentPlayer);
+        }
+        private void HandleMove(Move move)
+        {
+            SubHandleMove(move);
             timer.Start();
 
 
@@ -255,6 +260,11 @@ namespace ChessUI
                 socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
                 Listen();
                 //BoardGrid.IsEnabled = false;
+            }
+
+            if(isBotActive)
+            {
+                BotMakeMove();
             }
 
         }
@@ -360,6 +370,7 @@ namespace ChessUI
                 {
                     RestartGame();
                     isLANRun = false;
+                    isBotActive = false;
                     ShowLoginMenu();
                 }
             };
@@ -504,6 +515,7 @@ namespace ChessUI
                 else if (option == Option.PlayAgainstAI)
                 {
                     player = Player.White;
+                    isBotActive = true;
                 }
             };
         }
@@ -613,6 +625,123 @@ namespace ChessUI
         {
            
         }
+        #endregion
+
+
+        #region Bot make move
+        private void BotMakeMove()
+        {
+            GameState copyGameState = gameState.Copy();
+            Move bestMove = MiniMaxRoot(3, copyGameState, false);
+            SubHandleMove(bestMove);
+            timer.Start();
+
+
+            if (gameState.IsGameOver())
+            {
+                ShowGameOver();
+            }
+        }
+
+        private Move MiniMaxRoot(int depth, GameState gameState, bool isMaximisingPlayer)
+        {
+            /*
+            Board boardCopy = board.Copy();
+            GameState gameStateCopy = new GameState(gameState.CurrentPlayer, boardCopy);
+            */
+            IEnumerable<Move> movesCollection = gameState.AllLegalMovesFor(gameState.CurrentPlayer); // get all moves posible
+            List<Move> moveList = movesCollection.ToList();
+            double bbestMove = -9999;
+            Move bestMoveFound = new Move();
+            for (int i = 0; i < moveList.Count; i++)
+            {
+                Move newGameMove = moveList[i];
+                GameState newGameState = gameState.Copy();
+                gameStateStack.Push(newGameState.Copy());
+                newGameState.MakeMove(newGameMove);
+                double value = MiniMax(depth - 1, newGameState, -10000, 10000, isMaximisingPlayer);
+                if (gameStateStack.Count > 0)
+                    newGameState = gameStateStack.Pop();
+                //newGameState = gameStateStack.Pop();
+                if (value >= bbestMove)
+                {
+                    bbestMove = value;
+                    bestMoveFound = newGameMove;
+                }
+            }
+
+
+            return bestMoveFound;
+
+        }
+
+        private double MiniMax(int depth, GameState gameState, double alpha, double beta, bool isMaxmisingPlayer)
+        {
+            if (depth == 0 || gameState.IsGameOver())
+            {
+                board.SetValue();
+                double ret = board.BoardValue;
+                //int deb = 10;
+                return -ret;
+            }
+
+            if (isMaxmisingPlayer)
+            {
+                double bestMove = -9999;
+                IEnumerable<Move> movesCollection = gameState.AllLegalMovesFor(player); // get all moves posible
+                List<Move> moveList = movesCollection.ToList();
+                for (int i = 0; i < moveList.Count; i++)
+                {
+                    //gameStateStack.Push(gameState);
+                    Move newGameMove = moveList[i];
+                    GameState newGameState = gameState.Copy();
+                    gameStateStack.Push(newGameState);
+                    newGameState.MakeMove(newGameMove);
+                    double value = MiniMax(depth - 1, newGameState, alpha, beta, false);
+                    bestMove = Math.Max(bestMove, value);
+
+                    if (gameStateStack.Count > 0)
+                    {
+                        newGameState = gameStateStack.Pop();
+                    }
+                    alpha = Math.Max(alpha, bestMove);
+                    if (beta <= alpha)
+                        return bestMove;
+                }
+
+                return bestMove;
+            }
+
+            else
+            {
+                Player p2 = gameState.CurrentPlayer.Oppenent();
+                double bestMove = 9999;
+                IEnumerable<Move> movesCollection = gameState.AllLegalMovesFor(p2); // get all moves posible
+                List<Move> moveList;
+                moveList = movesCollection.ToList();
+                for (int i = 0; i < moveList.Count; i++)
+                {
+                    gameStateStack.Push(gameState.Copy());
+                    Move newGameMove = moveList[i];
+                    GameState newGameState = gameState.Copy();
+                    newGameState.MakeMove(newGameMove);
+                    double value = MiniMax(depth - 1, newGameState, alpha, beta, true);
+                    bestMove = Math.Min(bestMove, value);
+
+
+                    if (gameStateStack.Count > 0)
+                    {
+                        newGameState = gameStateStack.Pop();
+                    }
+                    beta = Math.Min(beta, bestMove);
+                    if (beta <= alpha)
+                        return bestMove;
+                }
+
+                return bestMove;
+            }
+        }
+
         #endregion
 
     }
