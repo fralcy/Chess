@@ -30,3 +30,19 @@ C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\Sock
 C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\refint\SocketProject.dll
 C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.pdb
 C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\ref\SocketProject.dll
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\bin\Debug\net6.0\SocketProject.deps.json
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\bin\Debug\net6.0\SocketProject.dll
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\bin\Debug\net6.0\SocketProject.pdb
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\bin\Debug\net6.0\ChessLogic.dll
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\bin\Debug\net6.0\ChessLogic.pdb
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.csproj.AssemblyReference.cache
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.AssemblyInfoInputs.cache
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.AssemblyInfo.cs
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.csproj.CoreCompileInputs.cache
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.sourcelink.json
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.csproj.CopyComplete
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.dll
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\refint\SocketProject.dll
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.pdb
+D:\Đồ ăn LTTQ\CuongSuperFinal\SocketProject\obj\Debug\net6.0\ref\SocketProject.dll
