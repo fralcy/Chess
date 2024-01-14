@@ -94,12 +94,6 @@ namespace ChessUI
             else
             {
                 OnToPositionSelected(pos);
-                if (isLANRun)
-                {
-                    socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
-                    Listen();
-                    //BoardGrid.IsEnabled = false;
-                }
             }
 
 
@@ -153,6 +147,10 @@ namespace ChessUI
             gameState = otherGameState;
             //gameState.CurrentPlayer.Oppenent();
             DrawBoard_OtherPlayer(gameState.Board);
+            if (gameState.IsGameOver())
+            {
+                ShowGameOver();
+            }
             timer.Start();
             //isTurn = true;
         }
@@ -195,7 +193,7 @@ namespace ChessUI
         private void HandlePromotion(Position from, Position to)
         {
             pieceImages[to.Row, to.Column].Source = Images.GetImage(gameState.CurrentPlayer, PieceType.Pawn);
-            pieceImages[from.Row, to.Column].Source = null;
+            pieceImages[from.Row, from.Column].Source = null;
 
             PromotionMenu promMenu = new PromotionMenu(gameState.CurrentPlayer);
             MenuContainer.Content = promMenu;
@@ -206,13 +204,6 @@ namespace ChessUI
                 Move promMove = new PawnPromotion(from, to, type);
                 HandleMove(promMove);
             };
-
-            if (isLANRun)
-            {
-                socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
-                Listen();
-                //BoardGrid.IsEnabled = false;
-            }
         }
         private void HandleMove(Move move)
         {
@@ -226,8 +217,13 @@ namespace ChessUI
             {
                 ShowGameOver();
             }
+            if (isLANRun)
+            {
+                socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
+                Listen();
+                //BoardGrid.IsEnabled = false;
+            }
 
-            
         }
 
         private void CacheMoves(IEnumerable<Move> moves)
@@ -270,20 +266,23 @@ namespace ChessUI
         }
         private void ShowGameOver()
         {
-            GameOverMenu gameOverMenu = new GameOverMenu(gameState);
-            MenuContainer.Content = gameOverMenu;
-            gameOverMenu.OptionSelected += option =>
+            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
             {
-                if (option == Option.Restart)
+                GameOverMenu gameOverMenu = new GameOverMenu(gameState);
+                MenuContainer.Content = gameOverMenu;
+                gameOverMenu.OptionSelected += option =>
                 {
-                    MenuContainer.Content = null;
-                    RestartGame();
-                }
-                else
-                {
-                    Close();
-                }
-            };
+                    if (option == Option.Restart)
+                    {
+                        MenuContainer.Content = null;
+                        RestartGame();
+                    }
+                    else
+                    {
+                        Close();
+                    }
+                };
+            });
         }
 
         private void RestartGame()
@@ -295,6 +294,14 @@ namespace ChessUI
             gameState = new GameState(Player.White, board.Initial());
             DrawBoard(gameState.Board);
             SetCursor(gameState.CurrentPlayer);
+            if (isLANRun && !IsMenuOnScreen())
+            {
+                socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
+                if (player == Player.Black)
+                {
+                    Listen();
+                }
+            }
         }
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {

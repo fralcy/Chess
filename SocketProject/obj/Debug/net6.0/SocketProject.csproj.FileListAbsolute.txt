@@ -14,3 +14,19 @@ D:\Đồ ăn LTTQ\final\SocketProject\obj\Debug\net6.0\SocketProject.dll
 D:\Đồ ăn LTTQ\final\SocketProject\obj\Debug\net6.0\refint\SocketProject.dll
 D:\Đồ ăn LTTQ\final\SocketProject\obj\Debug\net6.0\SocketProject.pdb
 D:\Đồ ăn LTTQ\final\SocketProject\obj\Debug\net6.0\ref\SocketProject.dll
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\bin\Debug\net6.0\SocketProject.deps.json
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\bin\Debug\net6.0\SocketProject.dll
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\bin\Debug\net6.0\SocketProject.pdb
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\bin\Debug\net6.0\ChessLogic.dll
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\bin\Debug\net6.0\ChessLogic.pdb
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.csproj.AssemblyReference.cache
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.AssemblyInfoInputs.cache
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.AssemblyInfo.cs
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.csproj.CoreCompileInputs.cache
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.sourcelink.json
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.csproj.CopyComplete
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.dll
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\refint\SocketProject.dll
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\SocketProject.pdb
+C:\Users\THINH\Desktop\LTTQ\chess test\Chess\SocketProject\obj\Debug\net6.0\ref\SocketProject.dll

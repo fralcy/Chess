@@ -13,30 +13,30 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChessUI
-build_property.ProjectDir = D:\Đồ ăn LTTQ\final\ChessUI\
+build_property.ProjectDir = C:\Users\THINH\Desktop\LTTQ\chess test\Chess\ChessUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/Đồ ăn LTTQ/final/ChessUI/App.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/GameOverMenu.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/GameOverMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/LANOption.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/LANOption.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/LoginMenu.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/LoginMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/MainWindow.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/PauseMenu.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/PauseMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/PromotionMenu.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/PromotionMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/final/ChessUI/ServerConfig.axaml]
+[C:/Users/THINH/Desktop/LTTQ/chess test/Chess/ChessUI/ServerConfig.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

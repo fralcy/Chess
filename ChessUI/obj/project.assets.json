@@ -4516,19 +4516,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Welcome\\.nuget\\packages\\": {}
+    "C:\\Users\\THINH\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đồ ăn LTTQ\\final\\ChessUI\\ChessUI.csproj",
+      "projectUniqueName": "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\ChessUI\\ChessUI.csproj",
       "projectName": "ChessUI",
-      "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessUI\\ChessUI.csproj",
-      "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-      "outputPath": "D:\\Đồ ăn LTTQ\\final\\ChessUI\\obj\\",
+      "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\ChessUI\\ChessUI.csproj",
+      "packagesPath": "C:\\Users\\THINH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\ChessUI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4542,11 +4547,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj": {
-              "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj"
+            "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\ChessLogic\\ChessLogic.csproj": {
+              "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\ChessLogic\\ChessLogic.csproj"
             },
-            "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj": {
-              "projectPath": "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj"
+            "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\SocketProject\\SocketProject.csproj": {
+              "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\chess test\\Chess\\SocketProject\\SocketProject.csproj"
             }
           }
         }
@@ -4598,7 +4603,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
