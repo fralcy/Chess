@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+             x:Class="ChessUI.LoginMenu">
+	<StackPanel Background="White">
+		<Button Click="NewGame_Click" Content="Two Players Mode"
+				Classes="Button" Height="60" FontSize="30"/>
+		<DockPanel>
+			<Button Classes="Button"
+					Click="LAN_Click"
+					Content="Play via LAN" Width="200"
+					Height="60" FontSize="30"/>
+			<TextBox Name="IPTextBox" VerticalContentAlignment="Center"
+					 Height="60" FontSize="30"/>
+		</DockPanel>
+		<Button Click="AI_Click" Content="Play against the Computer"
+				Classes="Button" Height="60" FontSize="30"/>
+	</StackPanel>
+</UserControl>
