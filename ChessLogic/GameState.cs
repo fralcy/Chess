@@ -19,6 +19,13 @@ namespace ChessLogic
             stateString = new StateString(CurrentPlayer, Board).ToString();
             stateHistory[stateString] = 1;
         }
+
+        public GameState Copy()
+        {
+            Board newBoard = Board.Copy();
+            GameState newGameState = new GameState(CurrentPlayer, newBoard);
+            return newGameState;
+        }
         public IEnumerable<Move> LegalMovesForPiece(Position pos)
         {
             if (Board.IsEmpty(pos) || Board[pos].Color!=CurrentPlayer)

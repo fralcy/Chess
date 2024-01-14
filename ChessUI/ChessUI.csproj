@@ -28,9 +28,12 @@
     <None Remove="Assets\RookB.png" />
     <None Remove="Assets\RookW.png" />
     <None Remove="Assets\RookW2.png" />
+	<None Remove="Assets\BackIcon.png" />
+	<None Remove="Assets\HomeIcon.png" />
   </ItemGroup>
+	
   <ItemGroup>
-    <AvaloniaResource Include="Assets\BishopW2.png" />
+	<AvaloniaResource Include="Assets\BishopW2.png" />
     <AvaloniaResource Include="Assets\Board.png" />
     <AvaloniaResource Include="Assets\icon.ico" />
     <AvaloniaResource Include="Assets\KnightW2.png" />
@@ -95,6 +98,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChessLogic\ChessLogic.csproj" />
+	<ProjectReference Include="..\SocketProject\SocketProject.csproj" />
   </ItemGroup>
 
 

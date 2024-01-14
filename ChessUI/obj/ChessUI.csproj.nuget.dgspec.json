@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessUI\\ChessUI.csproj": {}
+    "D:\\Đồ ăn LTTQ\\final\\ChessUI\\ChessUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj": {
+    "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj",
+        "projectUniqueName": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj",
         "projectName": "ChessLogic",
-        "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj",
-        "packagesPath": "C:\\Users\\THINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\obj\\",
+        "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj",
+        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
+        "outputPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,21 +59,17 @@
         }
       }
     },
-    "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessUI\\ChessUI.csproj": {
+    "D:\\Đồ ăn LTTQ\\final\\ChessUI\\ChessUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessUI\\ChessUI.csproj",
+        "projectUniqueName": "D:\\Đồ ăn LTTQ\\final\\ChessUI\\ChessUI.csproj",
         "projectName": "ChessUI",
-        "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessUI\\ChessUI.csproj",
-        "packagesPath": "C:\\Users\\THINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessUI\\obj\\",
+        "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessUI\\ChessUI.csproj",
+        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
+        "outputPath": "D:\\Đồ ăn LTTQ\\final\\ChessUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,15 +77,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj": {
-                "projectPath": "C:\\Users\\THINH\\Desktop\\LTTQ\\Chess\\ChessLogic\\ChessLogic.csproj"
+              "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj": {
+                "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj"
+              },
+              "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj": {
+                "projectPath": "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj"
               }
             }
           }
@@ -130,6 +123,65 @@
               "version": "[11.0.2, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj",
+        "projectName": "SocketProject",
+        "projectPath": "D:\\Đồ ăn LTTQ\\final\\SocketProject\\SocketProject.csproj",
+        "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
+        "outputPath": "D:\\Đồ ăn LTTQ\\final\\SocketProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj": {
+                "projectPath": "D:\\Đồ ăn LTTQ\\final\\ChessLogic\\ChessLogic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",

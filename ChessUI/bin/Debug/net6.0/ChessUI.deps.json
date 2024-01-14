@@ -13,7 +13,8 @@
           "Avalonia.Diagnostics": "11.0.2",
           "Avalonia.Fonts.Inter": "11.0.2",
           "Avalonia.Themes.Fluent": "11.0.2",
-          "ChessLogic": "1.0.0"
+          "ChessLogic": "1.0.0",
+          "SocketProject": "1.0.0"
         },
         "runtime": {
           "ChessUI.dll": {}
@@ -920,6 +921,14 @@
         "runtime": {
           "ChessLogic.dll": {}
         }
+      },
+      "SocketProject/1.0.0": {
+        "dependencies": {
+          "ChessLogic": "1.0.0"
+        },
+        "runtime": {
+          "SocketProject.dll": {}
+        }
       }
     }
   },
@@ -1420,6 +1429,11 @@
       "hashPath": "tmds.dbus.protocol.0.15.0.nupkg.sha512"
     },
     "ChessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SocketProject/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

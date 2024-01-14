@@ -19,5 +19,10 @@ namespace ChessUI
         {
             OptionSelected?.Invoke(Option.Restart);
         }
+
+        private void BackToMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            OptionSelected?.Invoke(Option.BackToMainMenu);
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace ChessLogic
         {
             pawnSkipPositions[player] = pos;
         }
-        public static Board Initial()
+        public Board Initial()
         {
             Board board = new Board();
             board.AddStartPieces();

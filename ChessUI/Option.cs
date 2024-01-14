@@ -10,6 +10,16 @@ namespace ChessUI
     {
         Restart,
         Exit,
-        Continue
+        Continue,
+        Start,
+        LAN,
+        OK,
+        PlayAgainstAI,
+        Host,
+        Join,
+        BackToMainMenu,
+        SendMessage,
+        BlackChosen,
+        WhiteChosen
     }
 }
