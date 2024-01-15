@@ -24,18 +24,7 @@ namespace SocketProject
                 return false;
             }
         }
-
-        /*
-        public void CloseSocket()
-        {
-            try
-            {
-                client.Close();
-            }
-
-            catch { }
-        }
-        */
+        
         #endregion
 
         #region Server
@@ -71,6 +60,31 @@ namespace SocketProject
         #region Both
         public string IP = "127.0.0.1";
         public int PORT = 9999;
+
+        public void CloseSocket()
+        {
+            try
+            {
+                client.Shutdown(SocketShutdown.Both);
+                
+            }
+
+            finally
+            {
+                client.Close();
+                
+            }
+            /*
+            try
+            {
+                server.Shutdown(SocketShutdown.Both);
+            }
+            finally 
+            {
+                server.Close();
+            }
+            */
+        }
 
         public byte[] SerializeData(Object o)
         {
@@ -131,6 +145,8 @@ namespace SocketProject
         {
             return target.Receive(data) == 1;
         }
+
+        
 
         #endregion
     }

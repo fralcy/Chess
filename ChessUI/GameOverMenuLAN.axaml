@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChessUI.GameOverMenuLAN">
+	<Border Width="365"
+			Height="165"
+			Classes="Border">
+		<Grid RowDefinitions="*,0.5*,*"
+			  ColumnDefinitions="*,*">
+			<TextBlock Grid.ColumnSpan="2"
+					   Name="WinnerText"
+					   Text="YOU WIN!"
+					   Classes="TextBlock"
+					   FontSize="28"/>
+			<TextBlock Grid.Row="1"
+					   Grid.ColumnSpan="2"
+					   Name="ReasonText"
+					   Text="YOUR OPPONENT HAS TURNED TAIL!"
+					   Classes="TextBlock"
+					   FontSize="20"/>
+			<Button Grid.Row="2"
+					Content="BACK TO MAIN MENU"
+					Classes="Button"
+					Width="150"
+					Height="40"
+					Click="BackToMenu_Click"/>
+			
+		</Grid>
+	</Border>
+</UserControl>

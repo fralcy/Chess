@@ -7,17 +7,14 @@
 	<StackPanel Background="White">
 		<Button Click="NewGame_Click" Content="Two Players Mode"
 				Classes="Button" Height="60" FontSize="30"/>
-		<DockPanel>
-			<Button Classes="Button"
-					Click="LAN_Click"
-					Content="Play via LAN" Width="200"
-					Height="60" FontSize="30"/>
-			<TextBox Name="IPTextBox" VerticalContentAlignment="Center"
-					 Height="60" FontSize="30"/>
-		</DockPanel>
 		<Button Classes="Button"
-					Click="AI_Click"
-					Content="Play against the Computer"
-					Height="60" FontSize="30"/>
+				Click="LAN_Click"
+				Content="Play via LAN"
+				Height="60" FontSize="30"/>
+		<TextBox Name="IPTextBox" Height="0"/>
+		<Button Classes="Button"
+				Click="AI_Click"
+				Content="Play against the Computer"
+				Height="60" FontSize="30"/>
 	</StackPanel>
 </UserControl>

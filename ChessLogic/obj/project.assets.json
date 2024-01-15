@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đồ ăn LTTQ\\CuongSuperFinal\\ChessLogic\\ChessLogic.csproj",
+      "projectUniqueName": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj",
       "projectName": "ChessLogic",
-      "projectPath": "D:\\Đồ ăn LTTQ\\CuongSuperFinal\\ChessLogic\\ChessLogic.csproj",
+      "projectPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj",
       "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-      "outputPath": "D:\\Đồ ăn LTTQ\\CuongSuperFinal\\ChessLogic\\obj\\",
+      "outputPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -103,7 +103,7 @@ namespace ChessUI
                 for (int c = 0; c < 8; c++)
                 {
                     Piece piece = board[r, c];
-                    pieceImages[r, c].Source = Images.GetImage(piece); // call from invalid thread
+                    pieceImages[r, c].Source = Images.GetImage(piece);
                 }
             }
         }
@@ -112,10 +112,8 @@ namespace ChessUI
             if (IsMenuOnScreen())
                 return;
 
-
             if (isLANRun && player != gameState.CurrentPlayer)
                 return;
-
 
             Point point = e.GetPosition(BoardGrid);
             Position pos = ToSquarePosition(point);
@@ -128,7 +126,6 @@ namespace ChessUI
             {
                 OnToPositionSelected(pos);
             }
-
 
         }
 
@@ -169,7 +166,6 @@ namespace ChessUI
                 for (int c = 0; c < 8; c++)
                 {
                     Piece piece = board[r, c];
-                    //pieceImages[r, c].Source = Images.GetImage(piece); // call from invalid thread
                     RunSetImage(pieceImages[r, c], piece);
                 }
             }
@@ -178,14 +174,12 @@ namespace ChessUI
         public void BoardGrid_OtherPlayerPointerPressed(GameState otherGameState)
         {
             gameState = otherGameState;
-            //gameState.CurrentPlayer.Oppenent();
             DrawBoard_OtherPlayer(gameState.Board);
             if (gameState.IsGameOver())
             {
                 ShowGameOver();
             }
             timer.Start();
-            //isTurn = true;
         }
 
         private Position ToSquarePosition(Point point)
@@ -259,10 +253,9 @@ namespace ChessUI
             {
                 socket.Send(new SocketData((int)SocketCommand.SEND_GAME_STATE, "", gameState));
                 Listen();
-                //BoardGrid.IsEnabled = false;
             }
 
-            if(isBotActive)
+            if (isBotActive)
             {
                 BotMakeMove();
             }
@@ -309,7 +302,7 @@ namespace ChessUI
         }
         private void ShowGameOver()
         {
-            Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+            Dispatcher.UIThread.Post(() =>
             {
                 GameOverMenu gameOverMenu = new GameOverMenu(gameState);
                 MenuContainer.Content = gameOverMenu;
@@ -368,52 +361,42 @@ namespace ChessUI
                 }
                 else if (option == Option.BackToMainMenu)
                 {
+                    if (isLANRun)
+                    {
+                        socket.Send(new SocketData((int)SocketCommand.QUIT, "", null));
+                    }
+
                     RestartGame();
                     isLANRun = false;
                     isBotActive = false;
+
                     ShowLoginMenu();
+
                 }
             };
         }
 
         private void ShowLANOptionMenu()
         {
-            //isLANRun = true;
             LANOption lanOption = new LANOption();
             MenuContainer.Content = lanOption;
             lanOption.OptionSelected += option =>
             {
                 if (option == Option.Join)
                 {
-                    //player = Player.Black;
                     socket = new SocketManager();
                     isClient = true;
                     isLANRun = true;
                     socket.IP = lanOption.IPTextBox.Text;
                     socket.ConnectServer();
                     socket.Send(new SocketData((int)SocketCommand.SERVER_PIECE_REQUEST, "", null));
-
-                    //socket.ConnectServer();
                     Listen();
-                    /*
-                    if(socket.ConnectServer())
-                        socket.Send(new SocketData((int)SocketCommand.SERVER_PIECE_REQUEST, "", null));
-                    */
-                    //player = Player.Black;
                     MenuContainer.Content = null;
-                    //ShowGameLobbyMenu();
-                    //glb.p2.Text = lanOption.NicknameTextBox.Text;
+
                 }
                 else if (option == Option.Host)
                 {
-
-                    //socket.IP = loginMenu.IPTextBox.Text;
-                    //player = Player.White;
                     ShowServerConfig();
-                    //socket.CreateServer();
-                    //ShowGameLobbyMenu();
-                    //Listen();
-                    //glb.p1.Text = lanOption.NicknameTextBox.Text;
                 }
                 else if (option == Option.BackToMainMenu)
                 {
@@ -450,15 +433,10 @@ namespace ChessUI
                 {
                     isServer = true;
                     isLANRun = true;
-                    //player = Player.Black;
-                    //gameState.CurrentPlayer = player;
                     socket = new SocketManager();
                     socket.IP = loginMenu.IPTextBox.Text;
-                    // Lan run here
                     if (!socket.ConnectServer())
                         socket.CreateServer();
-                    //serverConfig.IsEnabled = false;
-                    //player = Player.White;
 
                     if (serverConfig.WhiteCheckBox.IsChecked == true)
                     {
@@ -471,19 +449,13 @@ namespace ChessUI
                         player = Player.Black;
                         serverPieceMsg = "Black";
                     }
-                    //gameState.CurrentPlayer = player;
-                    /*
-                    if(serverConfig.BlackCheckBox.IsChecked == true)
-                    {
-                        gameState.CurrentPlayer = Player.Black;
-                    }
-                    */
+                    
 
-                    Thread.Sleep(3000);
+                    Thread.Sleep(1200);
                     Listen();
                     MenuContainer.Content = null;
 
-                    //player = Player.White;
+                    
                 }
             };
         }
@@ -538,54 +510,41 @@ namespace ChessUI
             }
             catch
             {
-                ShowGameOverLAN();
+
             }
 
         }
 
         void ShowGameOverLAN()
         {
+            Dispatcher.UIThread.Post(() =>
+            {
+                GameOverMenuLAN gameOverMenuLAN = new GameOverMenuLAN();
+                MenuContainer.Content = gameOverMenuLAN;
+                gameOverMenuLAN.OptionSelected += option =>
+                {
+                    if (option == Option.BackToMainMenu)
+                    {
+                        //socket.CloseSocket();
+                        RestartGame();
+                        isLANRun = false;
+                        isBotActive = false;
+                        ShowLoginMenu();
+                    }
+                };
+            });
 
         }
-
-        /*
-        async void ShowMessage(string message)
-        {
-            _ = Task.Run(() => OnTextFromAnotherThread(message));
-        }
-        
-        
-        void SetText(string text) => loginMenu.MessageTextBlock.Text = text;
-        string GetText() => loginMenu.MessageTextBlock.Text ?? "";
-        
-        async void OnTextFromAnotherThread(string text)
-        {
-            try
-            {
-                Dispatcher.UIThread.Post(() => SetText(text));
-                var result = await Dispatcher.UIThread.InvokeAsync(GetText);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        */
 
         void ProcessData(SocketData data)
         {
             switch (data.Command)
             {
-                case (int)SocketCommand.NOTIFY:
-                    //ShowMessage(data.Message);
-                    break;
                 case (int)SocketCommand.SEND_GAME_STATE:
                     BoardGrid_OtherPlayerPointerPressed(data.GameState);
                     break;
                 case (int)SocketCommand.QUIT:
-                    break;
-                case (int)SocketCommand.DISPLAY_CHAT_TEXT:
-                    DisplayChatText(data.Message);
+                    OnPlayerQuit();
                     break;
                 case (int)SocketCommand.SEND_SERVER_PIECE:
                     SetClientPiece(data.Message);
@@ -600,6 +559,12 @@ namespace ChessUI
             Listen();
         }
 
+        void OnPlayerQuit()
+        {
+            timer.Stop();
+            ShowGameOverLAN();
+        }
+
         void SendServerPiece()
         {
             socket.Send(new SocketData((int)SocketCommand.SEND_SERVER_PIECE, serverPieceMsg, null));
@@ -610,25 +575,19 @@ namespace ChessUI
             if (isServer == false && isClient == true && pieceType == "Black")
             {
                 player = Player.White;
-                //gameState.CurrentPlayer = Player.White;
+                
             }
             if (isServer == false && isClient == true && pieceType == "White")
             {
                 player = Player.Black;
-                //gameState.CurrentPlayer = Player.Black;
             }
 
         }
 
 
-        void DisplayChatText(string msg)
-        {
-           
-        }
         #endregion
 
-
-        #region Bot make move
+        #region Bot goes here
         private void BotMakeMove()
         {
             GameState copyGameState = gameState.Copy();
