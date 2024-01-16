@@ -29,4 +29,9 @@ public partial class ServerConfig : UserControl
     {
         OptionSelected?.Invoke(Option.Host);
     }
+
+    private void BackToMenu_Click(object sender, RoutedEventArgs e)
+    {
+        OptionSelected?.Invoke(Option.BackToMainMenu);
+    }
 }

@@ -4,17 +4,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
              x:Class="ChessUI.LoginMenu">
-	<StackPanel Background="White">
-		<Button Click="NewGame_Click" Content="Two Players Mode"
-				Classes="Button" Height="60" FontSize="30"/>
-		<Button Classes="Button"
-				Click="LAN_Click"
-				Content="Play via LAN"
-				Height="60" FontSize="30"/>
-		<TextBox Name="IPTextBox" Height="0"/>
-		<Button Classes="Button"
-				Click="AI_Click"
-				Content="Play against the Computer"
-				Height="60" FontSize="30"/>
-	</StackPanel>
+	<Border VerticalAlignment="Center" Width="800"
+			Height="800">
+		<StackPanel Background="White"
+				VerticalAlignment="Center"
+				Width="500">
+
+			<TextBlock Text="Choose Game Mode" FontSize="40"
+					 Height="100" Padding="20"/>
+			<Button Click="NewGame_Click" Content="Two Players Mode"
+					Classes="Button" Height="60" FontSize="30"/>
+			<Button Classes="Button"
+					Click="LAN_Click"
+					Content="Play via LAN"
+					Height="60" FontSize="30"/>
+			<TextBox Name="IPTextBox" Height="0"/>
+			<Button Classes="Button"
+					Click="AI_Click"
+					Content="Play against the Computer"
+					Height="60" FontSize="30"/>
+		</StackPanel>
+	</Border>
+	
 </UserControl>

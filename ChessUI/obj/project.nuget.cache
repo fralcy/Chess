@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "49DHifefDS910jpti6AiSrJLjEkzZxVcw86dNHRFkeG2uXLziMPAhNrwpCpWUQNOHsgLYVhGg0xRn/XBOBtWXw==",
+  "dgSpecHash": "yB0+KqktDbK6+09YjIb5V3WHPSh4p9XjmTyfpvPsHPyiWGcdy7qRgOENlK+jtupBAHF5M+04dbgaSZerDX0+Mg==",
   "success": true,
-  "projectFilePath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessUI\\ChessUI.csproj",
+  "projectFilePath": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessUI\\ChessUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Welcome\\.nuget\\packages\\avalonia\\11.0.2\\avalonia.11.0.2.nupkg.sha512",
     "C:\\Users\\Welcome\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",

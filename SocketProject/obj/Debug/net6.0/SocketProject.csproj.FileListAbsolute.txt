@@ -46,3 +46,19 @@ D:\Đồ ăn LTTQ\SuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.dll
 D:\Đồ ăn LTTQ\SuperFinal\SocketProject\obj\Debug\net6.0\refint\SocketProject.dll
 D:\Đồ ăn LTTQ\SuperFinal\SocketProject\obj\Debug\net6.0\SocketProject.pdb
 D:\Đồ ăn LTTQ\SuperFinal\SocketProject\obj\Debug\net6.0\ref\SocketProject.dll
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\bin\Debug\net6.0\SocketProject.deps.json
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\bin\Debug\net6.0\SocketProject.dll
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\bin\Debug\net6.0\SocketProject.pdb
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\bin\Debug\net6.0\ChessLogic.dll
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\bin\Debug\net6.0\ChessLogic.pdb
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.csproj.AssemblyReference.cache
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.AssemblyInfoInputs.cache
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.AssemblyInfo.cs
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.csproj.CoreCompileInputs.cache
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.sourcelink.json
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.csproj.CopyComplete
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.dll
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\refint\SocketProject.dll
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\SocketProject.pdb
+D:\Đồ ăn LTTQ\Final of Final\SocketProject\obj\Debug\net6.0\ref\SocketProject.dll

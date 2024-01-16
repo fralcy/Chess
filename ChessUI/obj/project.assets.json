@@ -4521,11 +4521,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessUI\\ChessUI.csproj",
+      "projectUniqueName": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessUI\\ChessUI.csproj",
       "projectName": "ChessUI",
-      "projectPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessUI\\ChessUI.csproj",
+      "projectPath": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessUI\\ChessUI.csproj",
       "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-      "outputPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessUI\\obj\\",
+      "outputPath": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4542,11 +4542,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj": {
-              "projectPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj"
+            "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\ChessLogic.csproj": {
+              "projectPath": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\ChessLogic.csproj"
             },
-            "D:\\Đồ ăn LTTQ\\SuperFinal\\SocketProject\\SocketProject.csproj": {
-              "projectPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\SocketProject\\SocketProject.csproj"
+            "D:\\Đồ ăn LTTQ\\Final of Final\\SocketProject\\SocketProject.csproj": {
+              "projectPath": "D:\\Đồ ăn LTTQ\\Final of Final\\SocketProject\\SocketProject.csproj"
             }
           }
         }

@@ -4,31 +4,41 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="ChessUI.LANOption">
-	<StackPanel Background="White">
+	<Border Height="800">
+		<StackPanel Background="White"
+				VerticalAlignment="Center" Width="600">
 
 
 
-		<Button Content="Host Game"
-				Click="Host_Click"
-				Height="60"
-				FontSize="20"/>	
 
-		<StackPanel Orientation="Horizontal"
-					Classes="StackPanel">
-			<TextBlock Text="Direct IP" VerticalAlignment="Top" Height="60"
-					   FontSize="30"/>
-			<TextBox Width="300" FontSize="30"
-					 Name="IPTextBox"
-					 Height="60" VerticalContentAlignment="Center"></TextBox>
-			<Button Content="Join"
-					Click="Join_Click"/>
+
+			<StackPanel Orientation="Horizontal"
+						Classes="StackPanel"
+					>
+				<TextBlock Text="Direct IP" VerticalAlignment="Top" Height="60"
+						   FontSize="30" Margin="0 10 100 0"/>
+				<TextBox Width="250" FontSize="30"
+						 Name="IPTextBox"
+						 Height="60" VerticalContentAlignment="Center"
+						 Margin="0 0 75 0"/>
+				<Button Content="Join"
+						Click="Join_Click"
+						Width="60" Height="60"/>
+			</StackPanel>
+
+			<Button Content="Host Game"
+					Click="Host_Click"
+					Height="50"
+					Width="180"
+					FontSize="20"/>
+
+			<Button Content="BACK TO MAIN MENU"
+						Classes="Button"
+						Width="205"
+						Height="40"
+						Margin="0 30 0 0"
+						Click="BackToMainMenu_Click"/>
 		</StackPanel>
-
-		<Button Content="BACK TO MAIN MENU"
-					Classes="Button"
-					Width="205"
-					Height="40"
-					Margin="0 30 0 0"
-					Click="BackToMainMenu_Click"/>
-	</StackPanel>
+	</Border>
+	
 </UserControl>

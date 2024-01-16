@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj": {}
+    "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\ChessLogic.csproj": {}
   },
   "projects": {
-    "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj": {
+    "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\ChessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj",
+        "projectUniqueName": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\ChessLogic.csproj",
         "projectName": "ChessLogic",
-        "projectPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\ChessLogic.csproj",
+        "projectPath": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\ChessLogic.csproj",
         "packagesPath": "C:\\Users\\Welcome\\.nuget\\packages\\",
-        "outputPath": "D:\\Đồ ăn LTTQ\\SuperFinal\\ChessLogic\\obj\\",
+        "outputPath": "D:\\Đồ ăn LTTQ\\Final of Final\\ChessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",

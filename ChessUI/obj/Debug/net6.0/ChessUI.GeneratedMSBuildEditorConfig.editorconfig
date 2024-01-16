@@ -13,33 +13,33 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChessUI
-build_property.ProjectDir = D:\Đồ ăn LTTQ\SuperFinal\ChessUI\
+build_property.ProjectDir = D:\Đồ ăn LTTQ\Final of Final\ChessUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/App.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/GameOverMenu.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/GameOverMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/GameOverMenuLAN.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/GameOverMenuLAN.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/LANOption.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/LANOption.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/LoginMenu.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/LoginMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/MainWindow.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/PauseMenu.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/PauseMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/PromotionMenu.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/PromotionMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Đồ ăn LTTQ/SuperFinal/ChessUI/ServerConfig.axaml]
+[D:/Đồ ăn LTTQ/Final of Final/ChessUI/ServerConfig.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

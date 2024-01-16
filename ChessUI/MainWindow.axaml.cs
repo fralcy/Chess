@@ -455,7 +455,13 @@ namespace ChessUI
                     Listen();
                     MenuContainer.Content = null;
 
-                    
+                } 
+                
+                else if(option == Option.BackToMainMenu)
+                {
+                    RestartGame();
+                    isLANRun = false;
+                    ShowLoginMenu();
                 }
             };
         }

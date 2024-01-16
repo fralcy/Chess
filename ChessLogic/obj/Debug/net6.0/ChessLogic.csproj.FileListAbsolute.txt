@@ -70,3 +70,15 @@ D:\Đồ ăn LTTQ\SuperFinal\ChessLogic\obj\Debug\net6.0\ChessLogic.dll
 D:\Đồ ăn LTTQ\SuperFinal\ChessLogic\obj\Debug\net6.0\refint\ChessLogic.dll
 D:\Đồ ăn LTTQ\SuperFinal\ChessLogic\obj\Debug\net6.0\ChessLogic.pdb
 D:\Đồ ăn LTTQ\SuperFinal\ChessLogic\obj\Debug\net6.0\ref\ChessLogic.dll
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\bin\Debug\net6.0\ChessLogic.deps.json
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\bin\Debug\net6.0\ChessLogic.dll
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\bin\Debug\net6.0\ChessLogic.pdb
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.AssemblyInfoInputs.cache
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.AssemblyInfo.cs
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.csproj.CoreCompileInputs.cache
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.sourcelink.json
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.dll
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\refint\ChessLogic.dll
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ChessLogic.pdb
+D:\Đồ ăn LTTQ\Final of Final\ChessLogic\obj\Debug\net6.0\ref\ChessLogic.dll
